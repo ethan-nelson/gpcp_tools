@@ -49,7 +49,7 @@ def read_monthly_data(file_dir, years):
             read_data = f.read(read_size)
 
             data_unpack = struct.unpack(structure, read_data)
-            data_unpack = np.reshape(data_unp,[72,144])
+            data_unpack = np.reshape(data_unpack, [72,144])
             data[i,m,:,:] = data_unpack
 
     return data
